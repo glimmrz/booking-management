@@ -1,5 +1,4 @@
 "use client";
-
 import { RefreshCw, ChevronDown, ChevronRight } from "lucide-react";
 import React from "react";
 import { useState } from "react";
@@ -14,7 +13,7 @@ const roomsData = [
         type: "category",
         bookings: [
           {
-            name: "Mr. Ali Raza",
+            bookie: "Mr. Ali Raza",
             start: "2024-03-05",
             end: "2024-03-09",
           },
@@ -32,12 +31,12 @@ const roomsData = [
         ],
         bookings: [
           {
-            name: "Ms Aisha Begum",
+            bookie: "Ms Aisha Begum",
             start: "2024-03-01",
             end: "2024-03-06",
           },
           {
-            name: "Ms Yasmin Aziz",
+            bookie: "Ms Yasmin Aziz",
             start: "2024-03-07",
             end: "2024-03-09",
           },
@@ -66,12 +65,12 @@ const roomsData = [
         ],
         bookings: [
           {
-            name: "Ms Aisha Begum",
+            bookie: "Ms Aisha Begum",
             start: "2024-02-27",
             end: "2024-03-03",
           },
           {
-            name: "Ms Layla Mahmoud",
+            bookie: "Ms Layla Mahmoud",
             start: "2024-03-04",
             end: "2024-03-09",
           },
@@ -89,7 +88,7 @@ const roomsData = [
         ],
         bookings: [
           {
-            name: "Ms Noura Al-Said",
+            bookie: "Ms Noura Al-Said",
             start: "2024-03-05",
             end: "2024-03-09",
           },
@@ -132,12 +131,12 @@ const roomsData = [
         ],
         bookings: [
           {
-            name: "Ms Safa Abdel-Aziz",
+            bookie: "Ms Safa Abdel-Aziz",
             start: "2024-03-06",
             end: "2024-03-07",
           },
           {
-            name: "Ms Nadia Omar",
+            bookie: "Ms Nadia Omar",
             start: "2024-03-08",
             end: "2024-03-09",
           },
@@ -169,17 +168,17 @@ const roomsData = [
         type: "category",
         bookings: [
           {
-            name: "Ms Aisha Begum",
+            bookie: "Ms Aisha Begum",
             start: "2024-03-01",
             end: "2024-03-03",
           },
           {
-            name: "Ms Zainab Ismail",
+            bookie: "Ms Zainab Ismail",
             start: "2024-03-04",
             end: "2024-03-06",
           },
           {
-            name: "Mr. Bilal Mahmood",
+            bookie: "Mr. Bilal Mahmood",
             start: "2024-03-07",
             end: "2024-03-09",
           },
@@ -208,7 +207,7 @@ const roomsData = [
         type: "category",
         bookings: [
           {
-            name: "Ms Amira Hussain",
+            bookie: "Ms Amira Hussain",
             start: "2024-03-07",
             end: "2024-03-09",
           },
@@ -219,7 +218,7 @@ const roomsData = [
         type: "category",
         bookings: [
           {
-            name: "Mr. Ibrahim Qureshi",
+            bookie: "Mr. Ibrahim Qureshi",
             start: "2024-03-02",
             end: "2024-03-05",
           },
@@ -266,12 +265,12 @@ const roomsData = [
         type: "category",
         bookings: [
           {
-            name: "Ms Amira Hussain",
+            bookie: "Ms Amira Hussain",
             start: "2024-02-27",
             end: "2024-03-03",
           },
           {
-            name: "Ms Rania El-Amin",
+            bookie: "Ms Rania El-Amin",
             start: "2024-03-04",
             end: "2024-03-09",
           },
@@ -289,7 +288,7 @@ const roomsData = [
         ],
         bookings: [
           {
-            name: "Ms Amira Hussain",
+            bookie: "Ms Amira Hussain",
             start: "2024-03-05",
             end: "2024-03-09",
           },
@@ -315,7 +314,7 @@ const roomsData = [
         type: "category",
         bookings: [
           {
-            name: "Ms Aisha Begum",
+            bookie: "Ms Aisha Begum",
             start: "2024-03-08",
             end: "2024-03-09",
           },
@@ -326,7 +325,7 @@ const roomsData = [
         type: "category",
         bookings: [
           {
-            name: "Ms Mariam Al-Fasi",
+            bookie: "Ms Mariam Al-Fasi",
             start: "2024-02-25",
             end: "2024-02-29",
           },
@@ -351,7 +350,7 @@ const roomsData = [
         ],
         bookings: [
           {
-            name: "Ms Aisha Begum",
+            bookie: "Ms Aisha Begum",
             start: "2024-03-06",
             end: "2024-03-08",
           },
@@ -362,17 +361,17 @@ const roomsData = [
         type: "category",
         bookings: [
           {
-            name: "Mr. Omar Farouk",
+            bookie: "Mr. Omar Farouk",
             start: "2024-02-26",
             end: "2024-02-28",
           },
           {
-            name: "Ms Nadia Omar",
+            bookie: "Ms Nadia Omar",
             start: "2024-02-29",
             end: "2024-03-02",
           },
           {
-            name: "Mr. Tariq Al-Masri",
+            bookie: "Mr. Tariq Al-Masri",
             start: "2024-03-03",
             end: "2024-03-05",
           },
@@ -390,7 +389,7 @@ const roomsData = [
         ],
         bookings: [
           {
-            name: "Mr. Kamal Haddad",
+            bookie: "Mr. Kamal Haddad",
             start: "2024-03-09",
             end: "2024-03-09",
           },
@@ -407,17 +406,17 @@ const roomsData = [
         type: "category",
         bookings: [
           {
-            name: "Ms Rania El-Amin",
+            bookie: "Ms Rania El-Amin",
             start: "2024-02-29",
             end: "2024-03-02",
           },
           {
-            name: "Ms Samira Amin",
+            bookie: "Ms Samira Amin",
             start: "2024-03-03",
             end: "2024-03-05",
           },
           {
-            name: "Mr. Tariq Al-Masri",
+            bookie: "Mr. Tariq Al-Masri",
             start: "2024-03-06",
             end: "2024-03-08",
           },
@@ -443,7 +442,7 @@ const roomsData = [
         type: "category",
         bookings: [
           {
-            name: "Ms Leila Hakim",
+            bookie: "Ms Leila Hakim",
             start: "2024-03-08",
             end: "2024-03-09",
           },
@@ -465,7 +464,7 @@ const roomsData = [
         ],
         bookings: [
           {
-            name: "Mr. Rashid Al-Amir",
+            bookie: "Mr. Rashid Al-Amir",
             start: "2024-02-29",
             end: "2024-03-01",
           },
@@ -526,12 +525,12 @@ const roomsData = [
         ],
         bookings: [
           {
-            name: "Ms Soraya Khoury",
+            bookie: "Ms Soraya Khoury",
             start: "2024-02-29",
             end: "2024-03-01",
           },
           {
-            name: "Mr. Bilal Mahmood",
+            bookie: "Mr. Bilal Mahmood",
             start: "2024-03-02",
             end: "2024-03-03",
           },
@@ -549,17 +548,17 @@ const roomsData = [
         ],
         bookings: [
           {
-            name: "Ms Zainab Ismail",
+            bookie: "Ms Zainab Ismail",
             start: "2024-02-28",
             end: "2024-02-29",
           },
           {
-            name: "Mr. Bilal Mahmood",
+            bookie: "Mr. Bilal Mahmood",
             start: "2024-03-01",
             end: "2024-03-02",
           },
           {
-            name: "Mr. Omar Farouk",
+            bookie: "Mr. Omar Farouk",
             start: "2024-03-03",
             end: "2024-03-04",
           },
@@ -581,17 +580,17 @@ const roomsData = [
         type: "category",
         bookings: [
           {
-            name: "Ms Noura Al-Said",
+            bookie: "Ms Noura Al-Said",
             start: "2024-02-27",
             end: "2024-02-28",
           },
           {
-            name: "Mr. Ibrahim Qureshi",
+            bookie: "Mr. Ibrahim Qureshi",
             start: "2024-02-29",
             end: "2024-03-01",
           },
           {
-            name: "Mr. Bilal Mahmood",
+            bookie: "Mr. Bilal Mahmood",
             start: "2024-03-02",
             end: "2024-03-03",
           },
@@ -623,12 +622,12 @@ const roomsData = [
         ],
         bookings: [
           {
-            name: "Ms Safa Abdel-Aziz",
+            bookie: "Ms Safa Abdel-Aziz",
             start: "2024-03-02",
             end: "2024-03-06",
           },
           {
-            name: "Mr. Ibrahim Qureshi",
+            bookie: "Mr. Ibrahim Qureshi",
             start: "2024-03-07",
             end: "2024-03-09",
           },
@@ -664,12 +663,12 @@ const roomsData = [
         ],
         bookings: [
           {
-            name: "Ms Amira Hussain",
+            bookie: "Ms Amira Hussain",
             start: "2024-02-29",
             end: "2024-03-04",
           },
           {
-            name: "Mr. Tariq Al-Masri",
+            bookie: "Mr. Tariq Al-Masri",
             start: "2024-03-05",
             end: "2024-03-09",
           },
@@ -694,14 +693,14 @@ const roomsData = [
         type: "category",
         repairs: [
           {
-            name: "Repairs",
+            bookie: "Repairs",
             start: "2024-03-05",
             end: "2024-03-06",
           },
         ],
         bookings: [
           {
-            name: "Mr. Rashid Al-Amir",
+            bookie: "Mr. Rashid Al-Amir",
             start: "2024-03-07",
             end: "2024-03-09",
           },
@@ -747,20 +746,19 @@ export default function HotelAvailabilityChart() {
 
   const getStatus = (room, date) => {
     const currentDate = date.toISOString().split("T")[0];
-    // console.log(room);
     if (
       room.repairs?.some((r) => r.start <= currentDate && r.end >= currentDate)
     )
-      return "repair";
+      return { status: "repair" };
     if (
       room.cleaning?.some((c) => c.start <= currentDate && c.end >= currentDate)
     )
-      return "cleaning";
-    if (
-      room.bookings?.some((b) => b.start <= currentDate && b.end >= currentDate)
-    )
-      return "booked";
-    return "available";
+      return { status: "cleaning" };
+    const booking = room.bookings?.find(
+      (b) => b.start <= currentDate && b.end >= currentDate
+    );
+    if (booking) return { status: "booked", bookie: booking.bookie };
+    return { status: "available" };
   };
 
   const getStatusBlocks = (room) => {
@@ -768,22 +766,16 @@ export default function HotelAvailabilityChart() {
     let currentBlock = { status: null, start: null, end: null, bookie: null };
 
     days.forEach((day, index) => {
-      const status = getStatus(room, day);
-
-      if (status !== currentBlock.status) {
+      const { status, bookie } = getStatus(room, day);
+      if (status !== currentBlock.status || bookie !== currentBlock.bookie) {
         if (currentBlock.status) {
           blocks.push(currentBlock);
         }
-        currentBlock = {
-          status,
-          start: index,
-          end: index,
-        };
+        currentBlock = { status, bookie, start: index, end: index };
       } else {
         currentBlock.end = index;
       }
     });
-    // console.log(currentBlock);
     blocks.push(currentBlock);
     return blocks;
   };
@@ -842,44 +834,42 @@ export default function HotelAvailabilityChart() {
                     </td>
                   </tr>
                   {expandedCategories.includes(category.name) &&
-                    category.rooms.map((room) => {
-                      return (
-                        <tr key={`${category.name}-${room.name}`}>
-                          <td className="whitespace-nowrap py-4 pl-8 pr-3 text-sm font-medium text-gray-900 sm:pl-10">
-                            {room.name}
-                          </td>
-                          <td colSpan={days.length} className="p-0">
-                            <div className="flex h-8">
-                              {getStatusBlocks(room).map((block, index) => {
-                                return (
-                                  <div
-                                    key={index}
-                                    className={`h-full text-center font-extrabold text-white capitalize rounded-md hover:ring-4 ${
-                                      block.status === "repair"
-                                        ? "bg-amber-700"
-                                        : block.status === "cleaning"
-                                        ? "bg-blue-200"
-                                        : block.status === "booked"
-                                        ? "bg-green-500"
-                                        : "bg-white"
-                                    }`}
-                                    style={{
-                                      width: `${
-                                        ((block.end - block.start + 1) /
-                                          days.length) *
-                                        100
-                                      }%`,
-                                    }}
-                                  >
-                                    Jane Doe
-                                  </div>
-                                );
-                              })}
-                            </div>
-                          </td>
-                        </tr>
-                      );
-                    })}
+                    category.rooms.map((room) => (
+                      <tr key={`${category.name}-${room.name}`}>
+                        <td className="whitespace-nowrap py-4 pl-8 pr-3 text-sm font-medium text-gray-900 sm:pl-10">
+                          {room.name}
+                        </td>
+                        <td colSpan={days.length} className="p-0">
+                          <div className="flex h-8 relative">
+                            {getStatusBlocks(room).map((block, index) => (
+                              <div
+                                key={index}
+                                className={`h-full rounded-md ${
+                                  block.status === "repair"
+                                    ? "bg-amber-700"
+                                    : block.status === "cleaning"
+                                    ? "bg-blue-500"
+                                    : block.status === "booked"
+                                    ? "bg-green-500"
+                                    : "bg-white"
+                                } relative group`}
+                                style={{
+                                  width: `${
+                                    ((block.end - block.start + 1) /
+                                      days.length) *
+                                    100
+                                  }%`,
+                                }}
+                              >
+                                <p className="text-white text-center font-extrabold text-xs">
+                                  {block.bookie}
+                                </p>
+                              </div>
+                            ))}
+                          </div>
+                        </td>
+                      </tr>
+                    ))}
                 </React.Fragment>
               ))}
             </tbody>
